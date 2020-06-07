@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { Platform } from 'react-native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View({
@@ -6,6 +7,7 @@ export const Container = styled.View({
   alignItems: 'center',
   justifyContent: 'center',
   paddingHorizontal: 30,
+  paddingBottom: Platform.OS === 'android' ? 120 : 40,
 });
 
 export const Title = styled.Text({
